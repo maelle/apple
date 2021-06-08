@@ -5,8 +5,6 @@
 #' @return A character vector.
 #' @export
 #'
-#' @examples
-#' get_packages2("ropensci")
 get_packages2 <- function(universe) {
   url <- sprintf("https://%s.r-universe.dev/packages", universe)
   token <- Sys.getenv("SECRET_PLANET_TOKEN")

@@ -15,6 +15,3 @@ A character vector.
 \description{
 Packages
 }
-\examples{
-get_packages2("ropensci")
-}
