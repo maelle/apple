@@ -9,7 +9,7 @@ get_packages2 <- function(universe) {
   url <- sprintf("https://%s.r-universe.dev/packages", universe)
   token <- Sys.getenv("SECRET_PLANET_TOKEN")
   if (!nzchar(token)) {
-    stop("Token for packages not found. See ?get_packages2")
+    stop("Can't find token for packages. See ?get_packages2")
   }
 
   resp <- httr::RETRY("GET", url,

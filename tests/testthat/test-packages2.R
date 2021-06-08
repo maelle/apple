@@ -4,3 +4,8 @@ test_that("get_packages2() works", {
   })
   expect_vector(pkgs, character())
 })
+
+test_that("get_packages2() error", {
+  withr::local_envvar("SECRET_PLANET_TOKEN" = "")
+  expect_snapshot_error(get_packages2("maelle"))
+})
