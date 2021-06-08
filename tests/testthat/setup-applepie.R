@@ -7,3 +7,12 @@ vcr::check_cassette_names()
 if (!nzchar(Sys.getenv("SECRET_PLANET_TOKEN"))) {
   Sys.setenv("SECRET_PLANET_TOKEN" = "foobar")
 }
+
+
+skip_if_not_beyonce <- function() {
+  user <- whoami::username()
+  if (user == "beyonce") {
+    return(invisible(TRUE))
+  }
+  skip("Not Beyonce !")
+}
